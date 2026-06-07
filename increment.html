@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Increment Values</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .container{
+                width:450px;
+                height:250px;
+                border: 2px solid black;
+                margin: 40px auto;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+            }
+            .left{
+                width: 55%;
+                
+            }
+            .right{
+                width: 45%;
+                text-align: center;
+            }
+            #box{
+                width: 100px;
+                height: 90px;
+                border: 2px solid black;
+                margin: 30px;
+                padding: 10px;
+                font-size: 30px;
+                line-height: 100px;
+                
+            }
+            button{
+                width: 30px;
+                height: 20px;
+                font-size: 13px;
+                margin: 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <h3>Increment values by clicking the buttons</h3>
+            </div>
+            <div class="right">
+                <div id="box">0</div><br><br>
+                <button onclick="addValue(1)">+1</button>
+                <button onclick="addValue(2)">+2</button>
+                <button onclick="addValue(5)">+5</button>
+                <button onclick="addValue(10)">+10</button>
+            </div>
+        </div>
+        <script>
+            let value=0;
+            function addValue(num){
+                value=value+num;
+                document.getElementById("box").innerHTML=value;
+            }
+        </script>
+    </body>
+</html>
